@@ -1,0 +1,168 @@
+@import '../app.scss';
+
+.skills-class {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 3;
+  background-color: white;
+  min-height: 100vh;
+  padding-top: 15vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 10vh;
+  width: 100%;
+}
+
+.general-description {
+  width: 50%;
+  text-align: center;
+}
+
+.job-title {
+  text-align: center;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $gray-800;
+  color: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gray-400;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.job-title-animate {
+  animation: animate-job;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+}
+
+.skills-container {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skill-featured {
+  transition: 0.2s;
+  transform: scale(1.5);
+  color: $secondary;
+}
+
+.skill-not-featured {
+  transition: 0.2s;
+}
+
+.skill-icon-featured {
+  background-color: $gray-800 !important;
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  border: 1px solid $gray-800;
+  background-color: $gray-400;
+  &:hover {
+    cursor: pointer;
+    color: $secondary;
+    background-color: $gray-800;
+    transition: 0.2s;
+    justify-self: center;
+  }
+}
+
+.skill-description {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.skill-description-container {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+}
+
+.skill-description-hidden {
+  z-index: 0;
+  position: absolute;
+  transition: 0.2s;
+  top: 100px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+}
+
+@keyframes animate-job {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .general-description {
+    width: 80vw;
+  }
+  .skill-icon {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .skill-not-featured {
+    transform: scale(0.6);
+  }
+  .skill-featured {
+    transform: scale(0.9);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .skill-icon {
+    width: 20vw;
+    height: 20vw;
+  }
+  .skill {
+    h1 {
+      display: none;
+    }
+  }
+  .skill-description-container {
+    height: 80vh;
+  }
+}

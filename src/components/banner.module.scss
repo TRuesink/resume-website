@@ -1,0 +1,67 @@
+@import '../app.scss';
+
+.banner-class {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.triangle-1 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 50vw solid transparent;
+  border-left: 48vw solid $gray-800;
+  border-bottom: 150vh solid $gray-800;
+  // border-top: 80vh solid transparent;
+}
+
+.triangle-2 {
+  position: absolute;
+  margin-top: 80vh;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-right: 100vw solid $gray-400;
+  border-bottom: 200vh solid $gray-400;
+  border-top: 50vh solid transparent;
+}
+
+.banner-image {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  filter: brightness(80%);
+}
+
+.banner-content {
+  position: absolute;
+  height: 150vh;
+  width: 100%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-bottom: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+@include media-breakpoint-down(lg) {
+  .triangle-1 {
+    border-right: 40vw solid transparent;
+    border-left: 58vw solid $gray-800;
+    border-bottom: 110vh solid $gray-800;
+  }
+  .triangle-2 {
+    border-top: 25vh solid transparent;
+  }
+  .banner-content {
+    background-color: rgba($gray-800, 0.5);
+  }
+  .banner-image {
+    width: 70%;
+  }
+}

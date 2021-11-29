@@ -1,0 +1,14 @@
+$dark: #161a1d;
+$light: #f5f3f4;
+$primary: #660708;
+$secondary: #a2d2ff;
+$info: rgba($dark, 0.5);
+
+$theme-colors: (
+  'dark': $dark,
+  'primary': $primary,
+  'secondary': $secondary,
+  'light': $light,
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap';

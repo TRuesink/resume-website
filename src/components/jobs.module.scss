@@ -1,0 +1,106 @@
+@import '../app.scss';
+
+.jobs-class {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 15vh;
+  padding-bottom: 20vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background: linear-gradient(transparent, $gray-400, $gray-400);
+}
+
+.pathDiv {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-top: 5vw;
+}
+
+.trail {
+  stroke-dasharray: 2790;
+  stroke-dashoffset: 2790;
+  stroke-width: 6px;
+}
+
+.job-description {
+  margin-top: 10vh;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 1s;
+  z-index: 3;
+}
+
+.job-description-right {
+  margin-top: 10vh;
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: flex-end;
+  transition: 1s;
+  z-index: 3;
+  text-align: right;
+}
+
+.job-content {
+  width: 50vw;
+}
+
+.job-hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.job-photo {
+  margin: 2rem;
+  height: 16em;
+  width: 16em;
+  border-radius: 8em;
+  border: 1px solid $gray-800;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@include media-breakpoint-down(lg) {
+  .job-description {
+    flex-direction: column;
+    position: relative;
+    margin-top: 20vh;
+  }
+  .job-description-right {
+    flex-direction: column-reverse;
+    position: relative;
+    margin-top: 20vh;
+  }
+  .job-photo {
+    position: absolute;
+    top: -5rem;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 4rem;
+    margin: 0;
+  }
+  .job-content {
+    width: 80vw;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    text-align: center;
+    p {
+      text-align: left;
+    }
+    background: rgba(white, 0.85);
+    border-radius: 1rem;
+  }
+}
