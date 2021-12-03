@@ -44,7 +44,6 @@ const ContactForm = () => {
       First_Name: '',
       Last_Name: '',
       Email: '',
-
       Request: '',
     },
     validate,
@@ -52,7 +51,7 @@ const ContactForm = () => {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({ 'form-name': 'contact-demo', ...values }),
+        body: encode({ 'form-name': 'contact-form', ...values }),
       })
         .then(() => {
           alert('Success');
@@ -72,7 +71,6 @@ const ContactForm = () => {
       data-netlify={true}
       onSubmit={formik.handleSubmit}
     >
-      <input type="hidden" name="form-name" value="pizzaOrder" />
       <div className="row mb-3">
         <div className="col">
           <label htmlFor="First_Name" className="form-label">
