@@ -116,7 +116,7 @@ const Jobs = () => {
             B.S. Mechanical Engineering{' '}
             <span className="fw-light">| 2012 - 2016</span>
           </h3>
-          <p>
+          <p className="fw-light">
             I graduated <span className="fst-italic">summa cum laude</span> from
             Western Michigan Unviversity with a bachelors degree in mechanical
             engineering, where I was introduced to basic programming. Still, I
@@ -135,7 +135,7 @@ const Jobs = () => {
             M.S. Mechanical Engineering{' '}
             <span className="fw-light">| 2017 - 2019</span>
           </h3>
-          <p>
+          <p className="fw-light">
             I completed a Masters degree from UW - Madison (GPA: 3.85), also in
             mechanical engineering, with a focus in cardiovascular fluid
             dynamics. I published a first author paper, attended international
@@ -166,7 +166,7 @@ const Jobs = () => {
           <h3 className="text-dark my-1">
             Sales Engineer <span className="fw-light">| 2019 - 2021</span>
           </h3>
-          <p>
+          <p className="fw-light">
             Out of grad school I started working in technical sales for Plastic
             Ingenuity (PI), a custom thermoformer. In parallel, I began teaching
             myself to code. Eventually, my self-study intersected with my work
@@ -187,7 +187,7 @@ const Jobs = () => {
             Operations Engineer{' '}
             <span className="fw-light">| 2021 - Present</span>
           </h3>
-          <p>
+          <p className="fw-light">
             My most recent landmark is Calimetrix: a Madison-based start-up
             selling magnetic resonance imaging (MRI) test objects. With only 8
             team members, my title as operations engineer hardly describes the

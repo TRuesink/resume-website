@@ -1,0 +1,88 @@
+@import '../app.scss';
+
+.contact-class {
+  min-height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  position: relative;
+  width: 80vw;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $gray-400;
+  border: 1px solid $gray-800;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.form-class {
+  width: 40%;
+  z-index: 2;
+}
+
+.triangle-1 {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 10rem solid $gray-800;
+  border-right: 10rem solid transparent;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.triangle-2 {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 10rem solid $gray-800;
+  border-right: 10rem solid transparent;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.description {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: $gray-800;
+}
+.divider {
+  height: 60vh;
+  width: 1px;
+  background-color: $gray-800;
+  margin: 2rem;
+  z-index: 2;
+}
+
+@include media-breakpoint-down(md) {
+  .form-container {
+    flex-direction: column;
+  }
+  .description {
+    width: 90%;
+  }
+  .form-class {
+    width: 90%;
+  }
+  .divider {
+    width: 80%;
+    height: 1px;
+  }
+  .triangle-1 {
+    border-top: 5rem solid $gray-800;
+    border-right: 5rem solid transparent;
+  }
+  .triangle-2 {
+    border-bottom: 5rem solid $gray-800;
+    border-right: 5rem solid transparent;
+  }
+}

@@ -1,15 +1,39 @@
 @import '../app.scss';
 
 .header-class {
+  position: fixed;
   width: 100%;
   background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
+  z-index: 15;
+  transition: 0.3s;
+}
+
+.scroll-up {
+  height: 90px !important;
+  background-color: rgba(black, 0.7) !important;
+  transition: 0.3s;
+  &:hover {
+    background-color: black;
+  }
+}
+
+.scroll-down {
+  height: 90px !important;
+  height: 0px !important;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .header-logo {
   margin-left: 2rem;
+}
+
+.logo-image {
+  width: 70px;
 }
 
 .header-link {

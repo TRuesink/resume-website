@@ -25,7 +25,7 @@ import { Link } from 'gatsby';
 
 const Projects = () => {
   return (
-    <div className={projectsClass}>
+    <div id="projects" className={projectsClass}>
       <div className={projectIcon}>
         <FontAwesomeIcon icon={faCodeBranch} size="5x" />
       </div>
@@ -124,7 +124,7 @@ const Projects = () => {
 
           <div className={projectInfo}>
             <Link
-              to="https://my-jobtracker.herokuapp.com"
+              to="https://timruesinkdev.com"
               style={{ color: 'inherit', textDecoration: 'inherit' }}
             >
               <h6>timruesinkdev.com</h6>
@@ -135,24 +135,17 @@ const Projects = () => {
               <hr style={{ margin: '0.5rem' }} />
               <span>
                 <FontAwesomeIcon icon={faReact} className="mx-1" />
-                <FontAwesomeIcon icon={faNodeJs} className="mx-1" />
                 <img
                   className="mx-1"
-                  src={mongoIcon}
-                  style={{ height: '1rem', verticalAlign: '-0.125em' }}
-                />
-                <img
-                  className="mx-1"
-                  src={expressIcon}
+                  src={gatsbyIcon}
                   style={{ height: '1rem', verticalAlign: '-0.125em' }}
                 />
                 <FontAwesomeIcon icon={faSass} className="mx-1" />
-                <FontAwesomeIcon icon={faGoogle} className="mx-1" />
               </span>
               <hr style={{ margin: '0.5rem' }} />
               <span>
                 <Link
-                  to="https://github.com/TRuesink/03-jobTracker"
+                  to="https://github.com/TRuesink/resume-website"
                   style={{ color: 'inherit', textDecoration: 'inherit' }}
                 >
                   <FontAwesomeIcon icon={faGithub} /> Github Repo

@@ -31,7 +31,9 @@ const Banner = () => {
             by Passion
           </h5>
           <button className="btn btn-secondary me-2 my-2">Contact Me</button>
-          <button className="btn btn-outline-light my-2">Projects</button>
+          <a href="#projects" className="btn btn-outline-light my-2">
+            Projects
+          </a>
         </div>
       </div>
       <div className={triangle2}></div>

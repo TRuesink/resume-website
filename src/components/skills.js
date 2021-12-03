@@ -88,7 +88,6 @@ const Skills = () => {
       </p>
       <div className={skillsContainer}>
         <div className={skill}>
-          <h1 className="display-6 text-center">Low Code</h1>
           <div
             className={`${skillIcon} ${
               elementState['lowCode'] ? skillIconFeatured : null
@@ -105,7 +104,6 @@ const Skills = () => {
           </div>
         </div>
         <div className={skill}>
-          <h1 className="display-6 text-center">Frontend</h1>
           <div
             className={`${skillIcon} ${
               elementState['frontend'] ? skillIconFeatured : null
@@ -122,7 +120,6 @@ const Skills = () => {
           </div>
         </div>
         <div className={skill}>
-          <h1 className="display-6">Backend</h1>
           <div
             className={`${skillIcon} ${
               elementState['backend'] ? skillIconFeatured : null
@@ -164,7 +161,7 @@ const Skills = () => {
             <span class="badge bg-primary">Salesforce</span>
             <span class="badge bg-primary mx-2">Zoho Creator</span>
           </h6>
-          <p>
+          <p className="fw-light">
             Low code platforms provide tremendous value in business
             enviornments. Developers can create useful applications in a
             fraction of the time it takes to develop traditional custom apps. At
@@ -188,6 +185,15 @@ const Skills = () => {
             <span class="badge bg-primary ms-2">Bootstrap / UI Semantic</span>
             <span class="badge bg-primary ms-2">Gatsby</span>
           </h6>
+          <p className="fw-light">
+            I took my first online React course via Udemy.com in fall of 2020,
+            and way too much fun. Toy front-ends turned into larger full stack
+            applications, ultimately resulting in 2 portfolio projects (and many
+            smaller ones): (1) a portfolio website with basic username /
+            password authentication and (2) a job search management application
+            with google oauth authentication. Most recently, I've learned
+            Gatsby.js (a static site generator) - This site is run on Gatsby.
+          </p>
         </div>
         <div
           className={`${
@@ -200,6 +206,16 @@ const Skills = () => {
             <span class="badge bg-primary ms-2">Express</span>
             <span class="badge bg-primary ms-2">MongoDB</span>
           </h6>
+          <p className="fw-light">
+            My backend experience is with node.js and express.js, with mongoDB
+            as the data layer. That said, I've had exposure to postgreSQL and
+            the flask framework (pythong). Both of my portfolio applications
+            include authentication, custom error handling, database connections
+            and of course, React frontends. They are hosted on heroku, but I
+            have experience hosting APIs on Digital Ocean and Linode as well.
+            Most Recently, I've been exploring / learning Robert Martin's (Uncle
+            Bob) clean architecture.
+          </p>
         </div>
       </div>
     </div>

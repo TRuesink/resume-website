@@ -1,0 +1,12 @@
+@import '../app.scss';
+
+.contact-form-class {
+  height: 50vh;
+  width: 50vw;
+  background-color: $secondary;
+}
+
+.form-feedback {
+  color: red;
+  font-size: small;
+}

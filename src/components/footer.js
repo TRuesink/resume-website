@@ -12,6 +12,7 @@ import {
   footerClass,
   footerSection,
   footerCenterSection,
+  divider,
 } from './footer.module.scss';
 
 const Footer = () => {
@@ -22,14 +23,16 @@ const Footer = () => {
           <StaticImage src="../images/ruesink_logo_black.svg" height={100} />
         </div>
       </div>
+      <div className={divider}></div>
       <div className={footerSection}>
         <h6>SITE</h6>
         <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
+        <Link to="/#projects">Projects</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/terms">Terms and Conditions</Link>
         <Link to="/privacy">Privacy Policy</Link>
       </div>
+      <div className={divider}></div>
       <div className={footerSection}>
         <h6>CONTACT</h6>
         <div>
