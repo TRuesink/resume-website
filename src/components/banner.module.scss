@@ -2,66 +2,50 @@
 
 .banner-class {
   min-height: 100vh;
+  height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: $gray-800;
+  border-bottom-right-radius: 50vh;
+  overflow: hidden;
   position: relative;
-}
-
-.triangle-1 {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-right: 50vw solid transparent;
-  border-left: 48vw solid $gray-800;
-  border-bottom: 150vh solid $gray-800;
-  // border-top: 80vh solid transparent;
-}
-
-.triangle-2 {
-  position: absolute;
-  margin-top: 80vh;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-right: 100vw solid $gray-400;
-  border-bottom: 200vh solid $gray-400;
-  border-top: 50vh solid transparent;
 }
 
 .banner-image {
   position: absolute;
-  right: 0;
-  height: 100%;
   width: 50%;
-  filter: brightness(80%);
+  height: 90%;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
 .banner-content {
-  position: absolute;
-  height: 150vh;
-  width: 100%;
+  height: 100%;
+  width: 60%;
   padding-left: 10vw;
-  padding-right: 10vw;
-  padding-bottom: 50vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 5;
 }
 
-@include media-breakpoint-down(lg) {
-  .triangle-1 {
-    border-right: 40vw solid transparent;
-    border-left: 58vw solid $gray-800;
-    border-bottom: 110vh solid $gray-800;
-  }
-  .triangle-2 {
-    border-top: 25vh solid transparent;
-  }
+@include media-breakpoint-down(md) {
   .banner-content {
-    background-color: rgba($gray-800, 0.5);
+    background-color: rgba($gray-800, 0.7);
   }
   .banner-image {
-    width: 70%;
+    width: 100%;
+  }
+  .banner-content {
+    width: 100%;
+    align-items: center;
+    padding-left: 0;
+  }
+  .banner-class {
+    justify-content: center;
   }
 }
