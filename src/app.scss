@@ -6,7 +6,7 @@ $info: rgba($dark, 0.5);
 
 $theme-colors: (
   'dark': $dark,
-  'primary': rgba($primary, 0.5),
+  'primary': $primary,
   'secondary': $secondary,
   'light': $light,
 );

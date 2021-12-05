@@ -6,18 +6,16 @@ const Banner = () => {
   return (
     <div className={bannerClass}>
       <div className={bannerContent}>
-        <h1 className="display-1 text-light">TIM RUESINK</h1>
-        <h5 className="fw-light text-light">
-          <span className="fw-light text-secondary">Mechanical Engineer</span>{' '}
-          by Training
+        <h1 className="display-1">TIM RUESINK</h1>
+        <h5 className="fw-light">
+          <span className="fw-light">Mechanical Engineer</span> by Training
         </h5>
-        <h5 className="fw-light text-light">
-          <span className="fw-light text-secondary">Software Developer</span> by
-          Passion
+        <h5 className="fw-light">
+          <span className="fw-light">Software Developer</span> by Passion
         </h5>
         <div>
           <button className="btn btn-secondary me-2 my-2">Contact Me</button>
-          <a href="#projects" className="btn btn-outline-light my-2">
+          <a href="#projects" className="btn btn-outline-dark my-2">
             Projects
           </a>
         </div>
