@@ -1,19 +1,10 @@
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faMailBulk,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
-import {
-  footerClass,
-  footerSection,
-  footerCenterSection,
-  divider,
-} from './footer.module.scss';
+import { footerClass, footerSection, divider } from './footer.module.scss';
 
 const Footer = () => {
   return (
@@ -29,8 +20,8 @@ const Footer = () => {
         <Link to="/">Home</Link>
         <Link to="/#projects">Projects</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/terms">Terms and Conditions</Link>
-        <Link to="/privacy">Privacy Policy</Link>
+        {/* <Link to="/terms">Terms and Conditions</Link>
+        <Link to="/privacy">Privacy Policy</Link> */}
       </div>
       <div className={divider}></div>
       <div className={footerSection}>

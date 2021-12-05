@@ -21,19 +21,16 @@ const Jobs = () => {
 
   function changePath() {
     const screenHeight = document.documentElement.clientHeight;
-    // console.log(screenHeight);
     const distFromTop = document
       .getElementById('jobSvg')
       .getBoundingClientRect().top;
-    if (distFromTop - screenHeight / 2 < 0) {
-      const pathLength = document.getElementById('jobPath').getTotalLength();
-      // console.log(pathLength);
-      const svgHeight = document
-        .getElementById('jobSvg')
-        .getBoundingClientRect().height;
-
-      const progress =
-        ((distFromTop - screenHeight / 2) / svgHeight) * pathLength;
+    const pathLength = document.getElementById('jobPath').getTotalLength();
+    const svgHeight = document
+      .getElementById('jobSvg')
+      .getBoundingClientRect().height;
+    const progress =
+      ((distFromTop - screenHeight / 2) / svgHeight) * pathLength;
+    if (distFromTop - screenHeight / 2 < 0 && pathLength + progress > 0) {
       document.getElementById('jobPath').style.strokeDashoffset =
         pathLength + progress;
     }
@@ -41,7 +38,6 @@ const Jobs = () => {
     const job2Pos = document.getElementById('UW').getBoundingClientRect().top;
     const job3Pos = document.getElementById('PI').getBoundingClientRect().top;
     const job4Pos = document.getElementById('CAL').getBoundingClientRect().top;
-    // console.log(job1Pos, job2Pos, job3Pos, job4Pos);
 
     const newState = { ...jobState };
     if (job1Pos - screenHeight / 2 < 0) {
@@ -67,7 +63,6 @@ const Jobs = () => {
 
     for (let job in newState) {
       if (newState[job] != jobState[job]) {
-        console.log(job + 'changed');
         setJobState({ ...jobState, [job]: newState[job] });
       }
     }
@@ -83,7 +78,7 @@ const Jobs = () => {
   return (
     <div className={jobsClass}>
       <div className={pathDiv}>
-        <h1 className="text-end display-3">WHERE IVE BEEN</h1>
+        <h1 className="text-end display-5">Where I've Been...</h1>
         <svg
           id="jobSvg"
           width="100%"
@@ -91,11 +86,20 @@ const Jobs = () => {
           viewBox="0 0 300 2250"
           preserveAspectRatio="none"
         >
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="black" />
+              <stop offset="75%" stop-color="black" />
+              <stop offset="95%" stop-color="transparent" />
+              <stop offset="100%" stop-color="transparent" />
+            </linearGradient>
+          </defs>
           <path
             id="jobPath"
+            stroke="url(#gradient)"
             className={trail}
             d="M 300 0 l -150 0 Q 10 0 10 250 Q 10 400 150 500 Q 290 600 290 750 Q 290 900 150 1000 Q 10 1100 10 1250 Q 10 1400 150 1500 Q 290 1600 290 1750 Q 290 1900 225 2000 Q 150 2100 150 2250"
-            stroke="black"
+            // stroke="black"
             fill="transparent"
           />
         </svg>

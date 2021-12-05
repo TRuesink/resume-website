@@ -13,6 +13,7 @@ import {
   skillDescriptionContainer,
   skillDescriptionHidden,
   generalDescription,
+  divider,
 } from './skills.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
@@ -43,7 +44,6 @@ const Skills = () => {
     }
     for (let el in newState) {
       if (newState[el] != elementState[el]) {
-        console.log(el + ' Changed');
         changeElementState({ ...elementState, [el]: newState[el] });
       }
     }
@@ -78,9 +78,10 @@ const Skills = () => {
         }`}
         id="softwareDev"
       >
-        <FontAwesomeIcon icon={faCode} size="5x" />
+        <FontAwesomeIcon icon={faCode} size="4x" />
+        <div className={divider}></div>
       </div>
-      <h1 className="display-4 text-center">SOFTWARE DEVELOPER</h1>
+      <h1 className="display-5 text-center">Software Developer</h1>
       <p className={`fw-light ${generalDescription}`}>
         Although circuitous, the above path led me to software engineering. The
         more I coded, the more I wanted to code - Take a look at the skills and

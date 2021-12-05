@@ -11,7 +11,7 @@
   padding-bottom: 20vh;
   padding-left: 10vw;
   padding-right: 10vw;
-  background: linear-gradient(transparent, $gray-400, $gray-400);
+  background: linear-gradient(transparent, $gray-400, $gray-400, transparent);
 }
 
 .pathDiv {
@@ -24,6 +24,7 @@
   padding-right: 10vw;
   padding-left: 10vw;
   padding-top: 5vw;
+  fill: linear-gradient(black, transparent);
 }
 
 .trail {

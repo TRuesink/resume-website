@@ -17,6 +17,7 @@ import {
   project,
   projectInfo,
   projectImage,
+  divider,
 } from './projects.module.scss';
 import mongoIcon from '../images/mongodb_icon.svg';
 import gatsbyIcon from '../images/gatsby.svg';
@@ -27,9 +28,10 @@ const Projects = () => {
   return (
     <div id="projects" className={projectsClass}>
       <div className={projectIcon}>
-        <FontAwesomeIcon icon={faCodeBranch} size="5x" />
+        <FontAwesomeIcon icon={faCodeBranch} size="4x" />
+        <div className={divider}></div>
       </div>
-      <h1 className="display-4 text-center">PROJECTS</h1>
+      <h1 className="display-5 text-center">Projects</h1>
       <div className={projectContainer}>
         <div className={project}>
           <div className={projectImage}>
