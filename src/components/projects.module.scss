@@ -101,6 +101,7 @@
 
 @include media-breakpoint-down(lg) {
   .project-container {
+    margin-top: 0px;
     flex-direction: column;
   }
   .project {
