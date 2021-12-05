@@ -1,10 +1,12 @@
 @import '../app.scss';
 
 .contact-class {
-  min-height: 150vh;
+  // min-height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 20vh;
+  padding-bottom: 15vh;
 }
 
 .form-container {

@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: $gray-800;
+  background: rgba($gray-800, 1);
   border-bottom-right-radius: 50vh;
   overflow: hidden !important;
   position: relative;
@@ -20,9 +20,11 @@
   right: 0;
   bottom: 0;
   z-index: 3;
+  overflow: hidden;
 }
 
 .banner-content {
+  position: relative;
   height: 100%;
   width: 60%;
   padding-left: 10vw;
@@ -31,6 +33,7 @@
   align-items: flex-start;
   justify-content: center;
   z-index: 5;
+  overflow: hidden;
 }
 
 @include media-breakpoint-down(md) {
