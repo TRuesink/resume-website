@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 import { bannerClass, bannerImage, bannerContent } from './banner.module.scss';
@@ -14,7 +15,9 @@ const Banner = () => {
           <span className="fw-light">Software Developer</span> by Passion
         </h5>
         <div>
-          <button className="btn btn-secondary me-2 my-2">Contact Me</button>
+          <Link to="/contact" className="btn btn-secondary me-2 my-2">
+            Contact Me
+          </Link>
           <a href="#projects" className="btn btn-outline-dark my-2">
             Projects
           </a>
